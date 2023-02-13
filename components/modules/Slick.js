@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import SlickCard from "./SlickCard";
 import avatar1 from "@/public/avatar1.jpg";
@@ -11,73 +11,75 @@ const Slick = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
     pauseOnHover: true,
   };
   return (
-    <>
-    <h2 className="text-3xl text-center mb-8 font-semibold mt-32 ">FeedBacks!</h2>
-    <div className=" w-full mx-auto ">
-      <div>
-        <Slider
-          {...settings}
-          className="w-full  mx-auto flex  items-center justify-around pt-2 pl-16"
-        >
-          <div>
-            <SlickCard
-              avatar={avatar1}
-              name={"Robert Brat"}
-              time={"1d"}
-              job={"Personal Trainer"}
-            />
-          </div>
-          <div>
-            <SlickCard
-              avatar={avatar2}
-              name={"John Lee "}
-              time={"5d"}
-              job={"Nurse"}
-            />
-          </div>
-          <div>
-            <SlickCard
-              avatar={avatar3}
-              name={"Marshal Jones"}
-              time={"1w"}
-              job={"Musician"}
-            />
-          </div>
-          <div>
-            <SlickCard
-              avatar={avatar4}
-              name={"Tony Pattinson"}
-              time={"3w"}
-              job={"Programmer"}
-            />
-          </div>
-          <div>
-            <SlickCard
-              avatar={avatar5}
-              name={"Sunny Hemworth"}
-              time={"3w"}
-              job={"Doctor"}
-            />
-          </div>
-          <div>
-            <SlickCard
-              avatar={avatar6}
-              name={"Clara Storm "}
-              time={"1mo"}
-              job={"Employee"}
-            />
-          </div>
-        </Slider>
+    <div className="w-full ">
+      <h2 className="text-3xl text-center mb-8 font-semibold mt-32 ">
+        FeedBacks!
+      </h2>
+      <div className=" w-full mx-auto">
+        <div>
+          <Slider
+            {...settings}
+            className="w-full  mx-auto flex  items-center justify-around pt-2 "
+          >
+            <div>
+              <SlickCard
+                avatar={avatar1}
+                name={"Robert Brat"}
+                time={"1d"}
+                job={"Personal Trainer"}
+              />
+            </div>
+            <div>
+              <SlickCard
+                avatar={avatar2}
+                name={"John Lee "}
+                time={"5d"}
+                job={"Nurse"}
+              />
+            </div>
+            <div>
+              <SlickCard
+                avatar={avatar3}
+                name={"Marshal Jones"}
+                time={"1w"}
+                job={"Musician"}
+              />
+            </div>
+            <div>
+              <SlickCard
+                avatar={avatar4}
+                name={"Tony Pattinson"}
+                time={"3w"}
+                job={"Programmer"}
+              />
+            </div>
+            <div>
+              <SlickCard
+                avatar={avatar5}
+                name={"Sunny Hemworth"}
+                time={"3w"}
+                job={"Doctor"}
+              />
+            </div>
+            <div>
+              <SlickCard
+                avatar={avatar6}
+                name={"Clara Storm "}
+                time={"1mo"}
+                job={"Employee"}
+              />
+            </div>
+          </Slider>
+        </div>
       </div>
     </div>
-    </>
   );
 };
 

@@ -27,7 +27,7 @@ const Categories = ({ data }) => {
   };
   return (
     <div>
-      <div className="flex items-center justify-center mb-20 gap-8">
+      <div className="flex items-center flex-col md:flex-row lg:flex-row justify-center mb-20 gap-8">
         <Autocomplete
           color="secondary"
           value={difficulty}
@@ -35,8 +35,8 @@ const Categories = ({ data }) => {
             setDifficulty(newValue);
             setQuery({ ...query, difficulty: newValue });
             if (newValue == "") {
-                setDifficulty("difficulty");
-            setQuery({ ...query, difficulty: "difficulty" });
+              setDifficulty("difficulty");
+              setQuery({ ...query, difficulty: "difficulty" });
             }
           }}
           className="transition-none "
@@ -51,14 +51,19 @@ const Categories = ({ data }) => {
           value={time}
           onChange={(event, newValue) => {
             setTime(newValue);
-            if (newValue == "More Than 30 Minutes") {
+            if (newValue === "More Than 30 Minutes") {
               setQuery({ ...query, time: "more" });
-            } else if (newValue == "Less Than 30 Minutes") {
+              setTime(newValue);
+            } else if (newValue === "Less Than 30 Minutes") {
               setQuery({ ...query, time: "less" });
-            } if (newValue == "") {
-            setTime("time");
-            setQuery({ ...query, time : "time" });
+              setTime(newValue);
+            } else if (newValue === "") {
+              setQuery({ ...query, time: "" });
             }
+          }}
+          onInputChange={(event, newInputValue) => {
+            if (newInputValue === "")
+              setQuery({ ...query, time: newInputValue });
           }}
           options={options2}
           sx={{ width: 300 }}

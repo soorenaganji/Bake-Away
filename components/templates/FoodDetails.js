@@ -34,10 +34,10 @@ const FoodDetails = ({ data }) => {
   } = data;
   return (
     <div>
-      <h3 className="text-4xl bg-pink-300 inline-block p-4 rounded-lg shadow-xl shadow-pink-200 mb-32 ">
+      <h3 className="text-2xl md:text-4xl lg:text-4xl bg-pink-300 inline-block p-4 rounded-lg shadow-xl shadow-pink-200 mb-32 ">
         Details
       </h3>
-      <div className="w-full py-4 flex items-start justify-start gap-8 ">
+      <div className="w-full py-4 flex flex-col items-start justify-start gap-8 ">
         <div className="">
           <div
             className={
@@ -56,9 +56,12 @@ const FoodDetails = ({ data }) => {
           />
         </div>
         <div className="flex flex-col items-start justify-start gap-16 ">
-          <h3 className="text-3xl text-pink-500 font-semibold ">{name}</h3>
-          <div className="flex items-center justify-center gap-1 text-slate-800 text-xl ">
-            <CiLocationOn className="text-2xl " /> <p>{details[0].Cuisine}</p>{" "}
+          <h3 className="text-xl md:text-3xl lg:text-3xl text-pink-500 font-semibold ">
+            {name}
+          </h3>
+          <div className="flex items-center justify-center gap-1 text-slate-800 text-lg ">
+            <CiLocationOn className="text-xl md:text-2xl lg:text-2xl " />{" "}
+            <p>{details[0].Cuisine}</p>{" "}
           </div>
           <div className="w-full mt-3 flex items-start justify-start gap-2 ml-[-10px] text-slate-800 px-3">
             <CiMoneyBill className="text-4xl mt-[-10px] " />
@@ -69,7 +72,7 @@ const FoodDetails = ({ data }) => {
         </div>
       </div>
       <div className="mb-16">
-        <p className="mt-16 text-justify text-lg text-slate-700 ">
+        <p className="mt-16 text-justify md:text-lg lg:text-lg text-slate-700 ">
           {introduction}
         </p>
       </div>
@@ -81,12 +84,14 @@ const FoodDetails = ({ data }) => {
           {details.map((detail, index) => (
             <li
               key={index}
-              className="flex items-center justify-start gap-2 list-decimal "
+              className="flex items-center justify-start gap-1 md:gap-2 lg:gap-2 list-decimal "
             >
-              <span className="text-xl font-semibold ">
+              <span className="text-lg md:text-xl lg:text-xl font-semibold ">
                 {Object.keys(detail)[0]} :{" "}
               </span>
-              <span className="text-lg">{Object.values(detail)[0]}</span>
+              <span className="md:text-lg lg:text-lg">
+                {Object.values(detail)[0]}
+              </span>
             </li>
           ))}
         </ul>
@@ -98,9 +103,9 @@ const FoodDetails = ({ data }) => {
             {ingredients.map((item, index) => (
               <li
                 key={index}
-                className="flex items-center justify-start gap-2  text-xl "
+                className="flex items-center justify-start gap-2  md:text-xl lg:text-xl "
               >
-                <p> {item}</p>
+                <p className="text-justify" > {item}</p>
               </li>
             ))}
           </ul>
