@@ -13,7 +13,7 @@ const Header = () => {
           variant="text"
           size="large"
           color="secondary"
-          className=" text-black  p-1 md:px-6 md:py-3 text-sm md:text-md lg:text-md hover:bg-pink-100 hover:border-pink-500 font-[Poppins] rounded-lg  "
+          className=" text-black  p-1 md:px-6 md:py-3 text-sm md:text-md lg:text-lg hover:bg-pink-100 hover:border-pink-500 font-[Poppins] rounded-lg  "
         >
           <Link href={"/Menu"}>Menu</Link>
         </button>
@@ -21,7 +21,7 @@ const Header = () => {
           variant="text"
           size="large"
           color="secondary"
-          className="border-pink-400 px-4 py-2 md:px-6 md:py-3 text-sm text-black md:text-md lg:text-md   hover:bg-pink-100 hover:border-pink-500 font-[Poppins] rounded-lg "
+          className="border-pink-400 px-4 py-2 md:px-6 md:py-3 text-sm text-black md:text-md lg:text-lg   hover:bg-pink-100 hover:border-pink-500 font-[Poppins] rounded-lg "
         >
           <Link href={"/Categories"}>Categories</Link>
         </button>

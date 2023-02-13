@@ -13,7 +13,7 @@ function Banner() {
               Bake Away!
             </h2>
           </div>
-          <p className="text-justify w-full px-2 md:w-[80%] lg:w-[80%] md:text-md  text-sm ">
+          <p className="text-justify w-full px-2 md:w-[80%] lg:w-[80%] md:text-md lg:text-lg  text-sm ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi omnis
             placeat fugit delectus incidunt suscipit veritatis quasi,
             praesentium natus labore rem, non deserunt quod laboriosam ratione
