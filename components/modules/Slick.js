@@ -18,7 +18,7 @@ const Slick = () => {
     pauseOnHover: true,
   };
   return (
-    <div className="w-full ">
+    <div className="w-full bg-black ">
       <h2 className="text-3xl text-center mb-8 font-semibold mt-32 ">
         FeedBacks!
       </h2>

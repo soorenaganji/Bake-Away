@@ -9,7 +9,7 @@ function CardsStack() {
       <h3 className="mb-8 text-2xl font-semibold text-center">
         The Choice is Yours
       </h3>
-      <div className="flex items-center justify-around flex-col lg:flex-row ">
+      <div className="flex items-center justify-around flex-col lg:flex-row bg-black ">
         <Card className="px-8 py-4 w-100 md:w-[40%] lg:w-[19%] my-8 rounded-lg shadow-lg ">
           <CardContent className="flex flex-col justify-center items-center gap-7 ">
             <ImRocket className="text-8xl text-pink-500 m-auto text-center " />

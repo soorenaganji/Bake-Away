@@ -4,9 +4,8 @@ import Image from "next/image";
 import aboutImage from "@/public/about.png";
 function About() {
   return (
-    <div>
+    <div className="w-full bg-black" >
       <div
-        variant="outlined"
         className="mt-32 py-8 px-4 bg-slate-50 rounded-lg mx-auto flex flex-col lg:flex-row border-[1px] "
       >
         <div>

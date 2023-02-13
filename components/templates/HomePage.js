@@ -4,7 +4,7 @@ import About from "@/components/modules/About";
 import Slick from "@/components/modules/Slick";
 const HomePage = () => {
     return (
-        <main >
+        <main className="overflow-hidden" >
         <Banner/>
         <CardsStack/>
         <About/>
