@@ -37,7 +37,7 @@ const FoodDetails = ({ data }) => {
       <h3 className="text-2xl md:text-4xl lg:text-4xl bg-pink-300 inline-block p-4 rounded-lg shadow-xl shadow-pink-200 mb-32 ">
         Details
       </h3>
-      <div className="w-full py-4 flex flex-col items-start justify-start gap-8 ">
+      <div className="w-full py-4 flex flex-col lg:flex-row items-start justify-start gap-8 ">
         <div className="">
           <div
             className={
