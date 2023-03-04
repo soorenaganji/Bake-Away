@@ -3,9 +3,11 @@ import Header from "@/components/layout/Header";
 import "@/styles/globals.css";
 import { StyledEngineProvider } from "@mui/material";
 import Head from "next/head";
+import { store } from "@/redux/store";
+import { Provider } from "react-redux";
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <Provider store={store}>
       <Head>
         <title>Bake Away!</title>
         <meta
@@ -39,6 +41,6 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
         <Footer />
       </div>
-    </>
+    </Provider>
   );
 }
