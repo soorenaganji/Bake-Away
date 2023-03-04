@@ -79,7 +79,7 @@ const Categories = ({ data }) => {
           Search
         </button>
       </div>
-      <div className="w-full flex items-center justify-between px-8 flex-wrap ">
+      <div className="w-full flex flex-col md:flex-row lg:flex-row items-center justify-between px-8 flex-wrap ">
         {data.length ? (
           data.map((food) => <FoodCard data={food} key={food.id} />)
         ) : (
